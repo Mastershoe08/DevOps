@@ -2,7 +2,7 @@
 set -e
 
 APP_DIR="/home/tester/app"
-REPO_URL="git@github.com:yourusername/your-repo.git"
+REPO_URL="https://github.com/Mastershoe08/DevOps"
 
 echo "[+] Deploying to $APP_DIR"
 
