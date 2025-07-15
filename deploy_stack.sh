@@ -1,20 +1,21 @@
 #!/bin/bash
 set -e
 
-APP_DIR="/home/tester/app"
+# Use a writable, safe directory for CI or local use
+APP_DIR="./app"  # Relative path to keep it simple
 REPO_URL="https://github.com/Mastershoe08/DevOps"
 
 echo "[+] Deploying to $APP_DIR"
 
-if [ -d "$APP_DIR" ]; then
+if [ -d "$APP_DIR/.git" ]; then
   echo "[+] Pulling latest changes..."
-  cd "$APP_DIR"
-  git pull
+  git -C "$APP_DIR" pull
 else
   echo "[+] Cloning repo..."
   git clone "$REPO_URL" "$APP_DIR"
-  cd "$APP_DIR"
 fi
+
+cd "$APP_DIR/flask-stack"
 
 echo "[+] Starting Docker Compose stack..."
 docker compose pull
