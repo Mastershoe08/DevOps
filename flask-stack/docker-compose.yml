@@ -1,0 +1,5 @@
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./flask:/app
