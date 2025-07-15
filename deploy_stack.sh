@@ -22,3 +22,4 @@ docker compose pull
 docker compose up -d
 
 echo "[✓] App deployed!"
+echo "this is dumb"
