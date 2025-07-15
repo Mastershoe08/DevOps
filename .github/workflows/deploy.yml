@@ -23,4 +23,5 @@ jobs:
     - name: Build and run the stack
       run: |
         cd flask-stack
-        bash deploy_stack.sh
+        chmod +x deploy_stack.sh  # <-- Add this to ensure it’s executable
+        ./deploy_stack.sh         # <-- Cleaner than 'bash deploy_stack.sh'
