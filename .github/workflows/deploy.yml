@@ -2,26 +2,22 @@ name: Deploy Stack
 
 on:
   push:
-<<<<<<< HEAD
     branches:
       - master
-=======
-    branches: [ master ]
->>>>>>> 25b200d (updating deploy script)
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up Docker
-      uses: docker/setup-buildx-action@v3
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v3
 
-    - name: Build and run the stack
-      run: |
-        cd flask-stack
-        chmod +x deploy_stack.sh  # <-- Add this to ensure it’s executable
-        ./deploy_stack.sh         # <-- Cleaner than 'bash deploy_stack.sh'
+      - name: Run deploy script
+        run: |
+          cd flask-stack
+          chmod +x deploy_stack.sh
+          ./deploy_stack.sh
