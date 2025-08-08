@@ -1,8 +1,8 @@
-Flask and GitHub Actions Test Deployment
+### Flask and GitHub Actions Test Deployment
 
 This repository contains a simple Flask application and a GitHub Actions workflow for building and deploying it using Docker Compose.
 
-Purpose:
+### Purpose:
 This project was created to experiment with:
 
     GitHub Actions — setting up a CI/CD pipeline
@@ -21,7 +21,7 @@ flask-stack/
 - requirements.txt     # Python dependencies
 - deploy_stack.sh          # Deployment script
 
-How It Works:
+### How It Works: 
 
     Push changes to the repository.
 
@@ -29,7 +29,7 @@ How It Works:
 
     The Docker image is built and started with Docker Compose.
 
-Notes:
+### Notes:
 
     This repository is for learning and demonstration purposes only.
 
