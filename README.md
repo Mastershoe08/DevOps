@@ -15,11 +15,11 @@ It currently deploys in a GitHub Actions sandbox. Future iterations will target 
 Structure
 
 flask-stack/
-├─- docker-compose.yml   # Docker services definition
-├── Dockerfile           # Flask app container build
-├── flask/               # Application source code
-└── requirements.txt     # Python dependencies
-deploy_stack.sh          # Deployment script
+- docker-compose.yml   # Docker services definition
+- Dockerfile           # Flask app container build
+- flask/               # Application source code
+- requirements.txt     # Python dependencies
+- deploy_stack.sh          # Deployment script
 
 How It Works:
 
